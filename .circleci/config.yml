@@ -1,0 +1,21 @@
+version: 2
+orbs:
+  node: circleci/node@4
+jobs:
+  unit-tests:
+    docker:
+      - image: cimg/node:current
+    environment:
+      NODE_OPTIONS: --experimental-vm-modules
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+      - run: node --version
+      - run: yarn --version
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          command: yarn test
+          name: Run unit tests
+
