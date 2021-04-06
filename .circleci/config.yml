@@ -10,6 +10,7 @@ jobs:
     steps:
       - checkout
       - node/install:
+          install-npm: false
           install-yarn: true
       - run: node --version
       - run: yarn --version
