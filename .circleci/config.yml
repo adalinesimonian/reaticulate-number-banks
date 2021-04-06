@@ -2,7 +2,7 @@ version: 2
 orbs:
   node: circleci/node@4
 jobs:
-  unit-tests:
+  build:
     docker:
       - image: cimg/node:current
     environment:
@@ -15,7 +15,27 @@ jobs:
       - run: yarn --version
       - node/install-packages:
           pkg-manager: yarn
+      - persist_to_workspace:
+        root: .
+        paths:
+          - .
+  unit-tests:
+    docker:
+      - image: cimg/node:current
+    environment:
+      NODE_OPTIONS: --experimental-vm-modules
+    steps:
+      # Reuse the workspace from the build job
+      - attach_workspace:
+          at: .
       - run:
           command: yarn test
           name: Run unit tests
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - unit-tests:
+          requires:
+            - build
 
