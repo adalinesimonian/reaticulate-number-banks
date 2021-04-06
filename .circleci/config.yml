@@ -16,8 +16,8 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - persist_to_workspace:
-        root: .
-        paths:
+          root: .
+          paths:
           - .
   unit-tests:
     docker:
