@@ -13,6 +13,7 @@ jobs:
       - run: yarn --version
       - node/install-packages:
           pkg-manager: yarn
+          override-ci-command: 'yarn install --immutable'
       - persist_to_workspace:
           root: .
           paths:
