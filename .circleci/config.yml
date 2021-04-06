@@ -9,9 +9,6 @@ jobs:
       NODE_OPTIONS: --experimental-vm-modules
     steps:
       - checkout
-      - node/install:
-          install-npm: false
-          install-yarn: true
       - run: node --version
       - run: yarn --version
       - node/install-packages:
