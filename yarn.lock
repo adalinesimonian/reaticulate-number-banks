@@ -3428,6 +3428,8 @@ fsevents@^2.2.1:
     jest: next
     jest-runner: next
     slash: ^3.0.0
+  bin:
+    number-reabank: ./number_banks.js
   languageName: unknown
   linkType: soft
 
