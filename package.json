@@ -1,6 +1,6 @@
 {
   "name": "reaticulate-number-banks",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Uniquely numbers Reaticulate LSBs",
   "main": "number_banks.js",
   "type": "module",
