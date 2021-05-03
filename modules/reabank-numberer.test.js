@@ -113,15 +113,15 @@ Bank 1 1 PB-LB - Instrument 1 Multi
 //! c=legato i=legato o=@2
 2 Articulation B
 //! c=short-light i=staccato o=note@3:24
-17 Articulation C - C1
+17 Articulation C
 //! c=short i=spiccato o=note@3:25
-15 Articulation D - C#1
+15 Articulation D
 //def-lsb 1 Articulation C
 //def-lsb 0 Articulation D
 //! c=long-dark i=accented-quarter o=note@3:26
-22 Articulation E - D1
+22 Articulation E
 //! c=short-light i=tremolo-measured o=note@3:27
-0 Articulation F - D#1
+0 Articulation F
 `
 
 const reabankOutputDefault = `
@@ -143,15 +143,15 @@ Bank 1 1 PB-LB - Instrument 1 Multi
 //! c=legato i=legato o=@2
 2 Articulation B
 //! c=short-light i=staccato o=note@3:24
-1 Articulation C - C1
+1 Articulation C
 //! c=short i=spiccato o=note@3:25
-3 Articulation D - C#1
+3 Articulation D
 //def-lsb 1 Articulation C
 //def-lsb 3 Articulation D
 //! c=long-dark i=accented-quarter o=note@3:26
-4 Articulation E - D1
+4 Articulation E
 //! c=short-light i=tremolo-measured o=note@3:27
-6 Articulation F - D#1
+6 Articulation F
 `
 
 const reabankMappingDefault = [
@@ -182,15 +182,15 @@ Bank 1 1 PB-LB - Instrument 1 Multi
 //! c=legato i=legato o=@2
 2 Articulation B
 //! c=short-light i=staccato o=note@3:24
-17 Articulation C - C1
+17 Articulation C
 //! c=short i=spiccato o=note@3:25
-15 Articulation D - C#1
+15 Articulation D
 //def-lsb 1 Articulation C
 //def-lsb 3 Articulation D
 //! c=long-dark i=accented-quarter o=note@3:26
-22 Articulation E - D1
+22 Articulation E
 //! c=short-light i=tremolo-measured o=note@3:27
-4 Articulation F - D#1
+4 Articulation F
 `
 
 const reabankMappingMaintain = [
@@ -223,15 +223,15 @@ Bank 1 1 PB-LB - Instrument 1 Multi
 //! c=legato i=legato o=@2
 2 Articulation B
 //! c=short-light i=staccato o=note@3:24
-3 Articulation C - C1
+3 Articulation C
 //! c=short i=spiccato o=note@3:25
-4 Articulation D - C#1
+4 Articulation D
 //def-lsb 3 Articulation C
 //def-lsb 4 Articulation D
 //! c=long-dark i=accented-quarter o=note@3:26
-5 Articulation E - D1
+5 Articulation E
 //! c=short-light i=tremolo-measured o=note@3:27
-6 Articulation F - D#1
+6 Articulation F
 `
 
 const reabankMappingRenumberDefs = [
@@ -262,15 +262,15 @@ Bank 1 1 PB-LB - Instrument 1 Multi
 //! c=legato i=legato o=@2
 2 Articulation B
 //! c=short-light i=staccato o=note@3:24
-17 Articulation C - C1
+17 Articulation C
 //! c=short i=spiccato o=note@3:25
-15 Articulation D - C#1
+15 Articulation D
 //def-lsb 3 Articulation C
 //def-lsb 4 Articulation D
 //! c=long-dark i=accented-quarter o=note@3:26
-22 Articulation E - D1
+22 Articulation E
 //! c=short-light i=tremolo-measured o=note@3:27
-5 Articulation F - D#1
+5 Articulation F
 `
 
 const reabankMappingMaintainRenumberDefs = [

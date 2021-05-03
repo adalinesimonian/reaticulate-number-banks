@@ -1,11 +1,11 @@
 /**
  * Regex that matches an LSB definition line (`//def-lsb LSB Articulation`).
  */
-const lsbDefinitionRegex = /^\/\/def-lsb\s(\d+)\s([^-\r]+)(\s-[^\r]+)?\r?$/
+const lsbDefinitionRegex = /^\/\/def-lsb\s(\d+)\s([^\r]+)\r?$/
 /**
  * Regex that matches an articulation definition line (`LSB Articulation`).
  */
-const articulationRegex = /^(\d+)\s([^-\r]+)(\s-[^\r]+)?\r?$/
+const articulationRegex = /^(\d+)\s([^\r]+)\r?$/
 
 /**
  * Provides methods with which to parse Reabank files.
@@ -133,8 +133,8 @@ export default class ReabankParser {
    * the line is successfully parsed.
    */
   parseDefinition (line, callback) {
-    this.#parseLine(line, lsbDefinitionRegex, (_, lsb, articulation, suffix) =>
-      callback(lsb, articulation, newLsb => `//def-lsb ${newLsb} ${articulation}${suffix || ''}`)
+    this.#parseLine(line, lsbDefinitionRegex, (_, lsb, articulation) =>
+      callback(lsb, articulation, newLsb => `//def-lsb ${newLsb} ${articulation}`)
     )
   }
 
@@ -146,8 +146,8 @@ export default class ReabankParser {
    * the line is successfully parsed.
    */
   parseArticulation (line, callback) {
-    this.#parseLine(line, articulationRegex, (_, lsb, articulation, suffix) =>
-      callback(lsb, articulation, newLsb => `${newLsb} ${articulation}${suffix || ''}`)
+    this.#parseLine(line, articulationRegex, (_, lsb, articulation) =>
+      callback(lsb, articulation, newLsb => `${newLsb} ${articulation}`)
     )
   }
 

@@ -21,7 +21,7 @@ describe('parsing', () => {
   describe('definitions', () => {
     describe('with valid definition lines', () => {
       beforeEach(() => {
-        parser.parseDefinition('//def-lsb 1 Articulation A - Ignored', mockCallback)
+        parser.parseDefinition('//def-lsb 1 Articulation A', mockCallback)
       })
 
       test('should call callback once', () => {
@@ -42,7 +42,7 @@ describe('parsing', () => {
 
       test('getNewLine function should return correctly updated line', () => {
         expect(mockCallback.mock.calls[0][2]('3'))
-          .toBe('//def-lsb 3 Articulation A - Ignored')
+          .toBe('//def-lsb 3 Articulation A')
       })
     })
 
@@ -71,7 +71,7 @@ describe('parsing', () => {
   describe('articulations', () => {
     describe('with valid articulation lines', () => {
       beforeEach(() => {
-        parser.parseArticulation('1 Articulation A - Ignored', mockCallback)
+        parser.parseArticulation('1 Articulation A', mockCallback)
       })
 
       test('should call callback once', () => {
@@ -92,7 +92,7 @@ describe('parsing', () => {
 
       test('getNewLine function should return correctly updated line', () => {
         expect(mockCallback.mock.calls[0][2]('3'))
-          .toBe('3 Articulation A - Ignored')
+          .toBe('3 Articulation A')
       })
     })
 
@@ -128,7 +128,7 @@ describe('updating', () => {
       let newLine
 
       beforeEach(() => {
-        newLine = parser.updateDefinition('//def-lsb 1 Articulation A - Ignored', mockUpdater)
+        newLine = parser.updateDefinition('//def-lsb 1 Articulation A', mockUpdater)
       })
 
       test('should call updater once', () => {
@@ -144,7 +144,7 @@ describe('updating', () => {
       })
 
       test('should return updated line using updater return value', () => {
-        expect(newLine).toBe('//def-lsb 3 Articulation A - Ignored')
+        expect(newLine).toBe('//def-lsb 3 Articulation A')
       })
     })
 
@@ -179,7 +179,7 @@ describe('updating', () => {
       let newLine
 
       beforeEach(() => {
-        newLine = parser.updateArticulation('1 Articulation A - Ignored', mockUpdater)
+        newLine = parser.updateArticulation('1 Articulation A', mockUpdater)
       })
 
       test('should call updater once', () => {
@@ -195,7 +195,7 @@ describe('updating', () => {
       })
 
       test('should return updated line using updater return value', () => {
-        expect(newLine).toBe('3 Articulation A - Ignored')
+        expect(newLine).toBe('3 Articulation A')
       })
     })
 
